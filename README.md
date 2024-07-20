@@ -1,3 +1,4 @@
+
 # Networking Project
 
 This project is a social networking application built with Django. It allows users to connect, share, and communicate with each other. The project is containerized using Docker and can be easily set up using Docker Compose.
@@ -18,5 +19,6 @@ User search functionality. <br>
 docker-compose up --build
 
 <br>
+
 
 

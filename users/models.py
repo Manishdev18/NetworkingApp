@@ -60,3 +60,4 @@ class Friend(models.Model):
 
     class Meta:
         unique_together = ('user', 'friend')
+        
