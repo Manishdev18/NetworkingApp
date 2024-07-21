@@ -1,0 +1,35 @@
+version: '3.8'
+
+
+
+    
+services:
+    wsgiserverapp:
+        build:            
+            context: ./
+            dockerfile: Dockerfile
+            network: host
+        container_name: wsgiserver
+        entrypoint: >
+            sh -c "
+            python manage.py migrate &&
+            python manage.py runserver  0.0.0.0:8000
+            "
+        volumes:
+            - ./:/usr/src/app/
+            - static_volume:/usr/src/app/staticfiles/
+            - media_volume:/usr/src/app/media/
+        
+        expose:
+            - 8000
+        ports:
+            - 8000:8000
+        
+        
+    
+
+volumes:
+    static_volume: 
+    media_volume:
+
+
