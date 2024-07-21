@@ -21,4 +21,11 @@ docker-compose up --build
 <br>
 
 
+use
+
+python manage.py generate_test_data
+<br>
+for testing data
+
+
 
